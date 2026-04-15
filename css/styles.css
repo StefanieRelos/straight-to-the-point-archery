@@ -186,3 +186,78 @@ a:focus, button:focus {
 .skip-link:focus {
     top: 0;
 }
+
+/* --- HERO SECTION STYLES --- */
+
+.hero {
+    height: 80vh; /* 80% sa gitas-on sa screen */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/hero-bg.png'); /* DIRI NIMO I-ADJUST ANG PHOTO NAME */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Isandig sa left ang text */
+    padding: 0 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.badge {
+    background-color: var(--gold-accent);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 4em;
+    color: white; /* Pution nato ang main text */
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--gold-accent); /* Kanang pulong nga "Archery" mahimong Gold */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Secondary Button Style (katong transparent) */
+.secondary-button {
+    padding: 12px 25px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: var(--deep-brown);
+}
+
+/* Responsive fix para sa text sa mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5em; }
+    .hero { text-align: center; justify-content: center; padding: 0 5%; }
+    .hero-buttons { flex-direction: column; }
+}
