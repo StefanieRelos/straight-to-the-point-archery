@@ -1,20 +1,100 @@
+/* 1. Brand Variables */
+:root {
+    --forest-green: #228B22;
+    --gold: #DAA520;
+    --cream: #F5F5DC;
+    --dark-text: #333;
+}
+
+/* 2. General Styles */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 3. Header & Navigation Fix */
 header {
-    background-color: #228B22; /* Forest Green */
+    background-color: var(--forest-green);
     color: white;
-    padding: 20px;
+    padding: 2rem 1rem;
     text-align: center;
 }
 
-nav ul li a {
+header img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav ul {
+    list-style-type: none; /* Kini ang mopawala sa dots */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Kini ang mopahigda sa menu */
+    justify-content: center; /* Kini ang mopa-center */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
-.cta-button, button, .enroll-now {
-    background-color: #DAA520; /* Gold */
+header nav ul li a:hover {
+    color: var(--gold);
+}
+
+/* 4. Main Content (Hero Section) */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: var(--forest-green);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* 5. Gold Button Fix */
+.cta-button, .view-classes {
+    background-color: var(--gold);
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
     text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b8860b; /* Medyo dark gold kung i-hover */
+}
+
+/* 6. Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
 }
