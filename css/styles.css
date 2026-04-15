@@ -261,3 +261,120 @@ a:focus, button:focus {
     .hero { text-align: center; justify-content: center; padding: 0 5%; }
     .hero-buttons { flex-direction: column; }
 }
+
+/* --- CLASSES PAGE ENHANCEMENTS --- */
+
+.section-intro {
+    max-width: 700px;
+    margin: 0 auto 10px;
+    color: #666;
+}
+
+.announcement {
+    color: var(--gold-accent);
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    margin-bottom: 40px;
+}
+
+.classes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.class-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 8px solid var(--forest-green);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.class-card:hover {
+    transform: scale(1.02);
+}
+
+.class-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.class-badge {
+    background: #f0fdf4;
+    color: var(--forest-green);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border: 1px solid #dcfce7;
+}
+
+.class-icon {
+    font-size: 1.5em;
+    color: #c0e1c0;
+}
+
+.class-card h2 {
+    margin: 0 0 15px 0;
+    color: var(--forest-green);
+    text-align: left;
+}
+
+.class-details {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.class-details i {
+    color: var(--forest-green);
+    margin-right: 8px;
+}
+
+.class-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tuition small {
+    display: block;
+    color: #999;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.tuition p {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--gold-accent);
+    margin: 0;
+}
+
+.enroll-button {
+    background-color: var(--gold-accent);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.enroll-button:hover {
+    background-color: #b8860b;
+    box-shadow: 0 4px 10px rgba(218, 165, 32, 0.4);
+}
