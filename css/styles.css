@@ -90,18 +90,14 @@ nav a {
 }
 
 /* 7. Instructor Photo - FIX PARA SA VISILY LOGO */
+/* Balik sa simple para mogawas na ang pictures */
 .instructor-photo {
     width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid var(--gold-accent);
-    
-    /* Mao ni ang mo-crop para mawala ang logo sa ubos */
-    object-fit: cover; 
-    object-position: top;
-    
-    display: inline-block;
+    height: auto; /* I-auto lang nato para dili ma-stretch */
+    border-radius: 50%; /* Lingin gihapon */
+    border: 4px solid var(--gold-accent);
     margin-bottom: 15px;
+    display: inline-block;
 }
 
 /* --- PART 2: FLEXBOX & GRID --- */
