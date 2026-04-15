@@ -87,19 +87,11 @@ nav a:hover {
 
 /* 7. Instructor Photo Crop (Para sa Instructors Page) */
 .instructor-photo {
-    /* Kani ang basic setup para malingin */
-    width: 200px;  /* Pwede nimo ni dakoan, pananglitan 250px */
-    height: 200px; /* Kinahanglan width ug height kay parehas */
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    
-    /* MAO NI ANG TRICK PARA MA-CROP ANG LOGO */
-    object-fit: cover; /* Mopakita lang ang tunga sa picture */
-    object-position: top center; /* Isaka nato gamay aron mawala ang logo sa ubos */
-    overflow: hidden; /* Itago ang bisan unsang sobra sa sirkulo */
-
-    /* Kani ang setup para sa border nga gold */
-    border: 5px solid var(--gold-accent);
-    box-sizing: border-box; /* Sigurado nga ang border dili makadako sa picture */
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 /* --- PART 2: FLEXBOX & GRID --- */
