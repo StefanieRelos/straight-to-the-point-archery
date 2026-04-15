@@ -93,3 +93,72 @@ nav a:hover {
     object-fit: cover;
     margin-bottom: 10px;
 }
+
+/* --- PART 2: FLEXBOX & GRID --- */
+
+/* Navigation Fix para sa Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Mag-linya pabalagbag sa cellphone */
+        gap: 10px;
+    }
+}
+
+/* Grid Layout para sa Content */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns sa desktop */
+    grid-gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr; /* 1 column nalang sa cellphone */
+    }
+}
+
+/* --- PART 4: HOVER & INTERACTIVITY --- */
+
+/* Smooth Transition para sa tanang buttons ug links */
+a, .cta-button, button {
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect sa Gold Button */
+.cta-button:hover {
+    background-color: #b8860b; /* Darker Gold */
+    transform: scale(1.05); /* Mo-dako og gamay */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Hover Effect sa Navigation Links */
+nav ul li a:hover {
+    color: var(--gold-accent);
+    text-decoration: underline;
+}
+
+/* Image Hover Animation */
+.instructor-photo:hover {
+    transform: scale(1.1); /* Mo-zoom ang nawong sa instructor */
+    border: 3px solid var(--gold-accent);
+}
+
+/* Accessibility: Focus State */
+a:focus, button:focus {
+    outline: 3px solid var(--forest-green);
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--gold-accent);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0; /* Mogawas ra siya kung i-tab sa keyboard */
+}
