@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    flex-direction: column; /* I-stack ang content vertically */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,6 +25,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: 2.5em; text-align: center; }
 h2 { font-size: 2em; }
+
+html, body {
+    height: 100%; /* Kinahanglan full height ang html/body */
+    margin: 0;
+}
 
 /* 3. Header & Footer */
 header {
@@ -46,6 +52,10 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+main {
+    flex: 1; /* Kini ang mo-push sa footer paubos */
 }
 
 /* 4. Navigation Bar */
@@ -377,4 +387,156 @@ a:focus, button:focus {
 .enroll-button:hover {
     background-color: #b8860b;
     box-shadow: 0 4px 10px rgba(218, 165, 32, 0.4);
+}
+
+/* --- ABOUT PAGE ENHANCEMENTS --- */
+
+.about-hero {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.mission-statement {
+    font-style: italic;
+    font-size: 1.2em;
+    color: var(--deep-brown);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.about-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 5px solid var(--gold-accent);
+}
+
+.card-icon {
+    font-size: 2.5em;
+    color: var(--forest-green);
+    margin-bottom: 20px;
+}
+
+.about-card h2 {
+    color: var(--forest-green);
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #555;
+    line-height: 1.8;
+}
+
+/* --- CONTACT PAGE ENHANCEMENTS --- */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info sa left, Form sa right */
+    gap: 50px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-item i {
+    font-size: 1.5em;
+    color: var(--gold-accent);
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.info-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: var(--forest-green);
+}
+
+.info-item p {
+    margin: 0;
+    color: #666;
+}
+
+/* Contact Form Styling */
+.contact-form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--deep-brown);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    box-sizing: border-box; /* Importante para dili molapas sa container */
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--forest-green);
+    box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.1);
+}
+
+.submit-button {
+    width: 100%;
+    background-color: var(--forest-green);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #1a6b1a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Fix */
+@media (max-width: 850px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Mag-top and bottom na sila sa mobile */
+    }
 }
