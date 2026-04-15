@@ -91,15 +91,17 @@ nav a {
 
 /* 7. Instructor Photo - FIX PARA SA VISILY LOGO */
 .instructor-photo {
-    width: 250px; /* Gidakoan gamay para mas klaro */
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    object-fit: cover; /* Kini ang mo-crop sa picture */
-    object-position: top; /* Kini ang mo-isaka sa view aron matago ang logo sa ubos */
-    border: 5px solid var(--gold-accent); /* Gi-add ang border daan para nindot */
+    border: 5px solid var(--gold-accent);
+    
+    /* Mao ni ang mo-crop para mawala ang logo sa ubos */
+    object-fit: cover; 
+    object-position: top;
+    
+    display: inline-block;
     margin-bottom: 15px;
-    transition: transform 0.3s ease, border 0.3s ease;
-    overflow: hidden;
 }
 
 /* --- PART 2: FLEXBOX & GRID --- */
